@@ -311,6 +311,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d83a2ef04b9a8b46b65df791c7639c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogue:
+    name: Bob
+    sentences:
+    - Welcome! This is a test of my dialogue system!
+    - Testing, testing! 123!
+    - Have a nice day!
 --- !u!114 &413788388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,7 +360,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 413788389}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 413788387}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &413788389
 MonoBehaviour:
   m_ObjectHideFlags: 0
