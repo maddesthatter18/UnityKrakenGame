@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class DialogueMangaer : MonoBehaviour
 {
+    public TextMeshProUGUI nameText;
+    public TextMeshProUGUI dialogueText;
     private Queue<string> sentences;
 
     void Start()
@@ -14,6 +16,8 @@ public class DialogueMangaer : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         Debug.Log("Starting converstation with " + dialogue.name);
+
+        nameText.text = dialogue.name;
 
         sentences.Clear();
 
@@ -33,7 +37,8 @@ public class DialogueMangaer : MonoBehaviour
             return;
         }
 
-        string sentences.Dequeue();
+        string sentence = sentences.Dequeue();
+        dialogueText.text = sentence;
     }
 
     void EndDialogue()
